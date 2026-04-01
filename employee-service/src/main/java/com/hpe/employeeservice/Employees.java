@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employees {
-    private List<Employee> employees;
 
-    public Employees() {
-        employees = new ArrayList<>();
+    private List<Employee> employeeList;
+
+    public List<Employee> getEmployeeList()
+    {
+        if (employeeList == null)
+        {
+            employeeList = new ArrayList<>();
+        }
+        return employeeList;
     }
 
-    public List<Employee> getEmployees() { return employees; }
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
+    public void setEmployeeList(List<Employee> employeeList)
+    {
+        this.employeeList = employeeList;
     }
-    public void addEmployee(Employee e) { employees.add(e); }
 }
